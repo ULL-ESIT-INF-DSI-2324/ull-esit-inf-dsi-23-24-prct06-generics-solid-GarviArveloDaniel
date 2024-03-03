@@ -2,17 +2,17 @@ import "mocha";
 import { expect } from "chai";
 import { Box } from "../../src/ejercicio-01/box";
 import { Furniture } from "../../src/ejercicio-01/furniture";
-import { Appliance } from "../../src/ejercicio-01/appliance";
+import { Device } from "../../src/ejercicio-01/device";
 
 describe("Box", () => {
   const chair = new Furniture("Chair", "A comfortable chair", 10, false, 100);
   const table = new Furniture("Table", "A sturdy table", 20, false, 200);
 
-  const fridge = new Appliance("Fridge", "Refrigerator", 50, true, 500);
-  const tv = new Appliance("TV", "Television", 30, false, 1000);
+  const fridge = new Device("Fridge", "Refrigerator", 50, true, 500);
+  const tv = new Device("TV", "Television", 30, false, 1000);
 
   const box1 = new Box<Furniture>(1);
-  const box2 = new Box<Furniture | Appliance>(2);
+  const box2 = new Box<Furniture | Device>(2);
 
   it("should add an item to the box", () => {
     box1.addItem(chair);
