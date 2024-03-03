@@ -6,14 +6,11 @@ import { Item } from "./item";
  */
 export class Box<T extends Item> {
   private items: T[] = [];
-  public id: number;
-
   /**
    * Creates a new instance of the Box class.
    * @param id - The ID of the box.
    */
-  constructor(id: number) {
-    this.id = id;
+  constructor(public id: number) {
   }
 
   /**
